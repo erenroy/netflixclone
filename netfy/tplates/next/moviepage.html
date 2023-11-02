@@ -1,0 +1,1170 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .firstsec1 {
+            height: 100%;
+            width: 100%;
+            background-image: url("{% static 'movie/try4.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            /* background-repeat: no-repeat; */
+        }
+
+        .firstsec1 img {
+            margin-top: 1.2%;
+            margin-left: 1.2%;
+        }
+
+        /* 
+        #logoutbuttton {
+            margin-left: 80%;
+        } */
+
+        /* starting of movie setup section */
+        .content h1 {
+            color: white;
+            margin-top: 17%;
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 3%;
+        }
+
+        .content p {
+            color: white;
+            margin-top: 0.8%;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-left: 3%;
+            margin-right: 50%;
+        }
+
+        .content h3 {
+            color: white;
+            margin-top: 0.8%;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-left: 3%;
+            margin-right: 50%;
+        }
+
+        .playbuttons {
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+
+        #button2 {
+            margin-left: 1%;
+        }
+
+        .movielist {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .movielist p {
+            color: rgb(35, 35, 35);
+        }
+
+        .movielist h1 {
+            margin-top: 1.5%;
+            margin-left: 5%;
+            color: white;
+        }
+
+        .lists {
+            margin-top: 2%;
+            margin-left: 7%;
+        }
+
+        #gap {
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+
+        /* styling the navbar */
+        .mynav {
+            display: flex;
+        }
+
+        .mynav h5 {
+            color: rgb(255, 255, 255);
+            font-size: 1.7rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 42px;
+            margin-left: 30px;
+        }
+
+        .mynav h1 {
+            color: rgb(255, 255, 255);
+            font-size: 1.7rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 42px;
+            margin-left: 25px;
+        }
+
+        .mynav h2 {
+            color: rgb(255, 248, 248);
+            font-size: 1.7rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 42px;
+            margin-left: 25px;
+        }
+
+        .mynav h3 {
+            color: rgb(255, 255, 255);
+            font-size: 1.7rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 42px;
+            margin-left: 25px;
+        }
+
+        .mynav h4 {
+            color: rgb(255, 255, 255);
+            font-size: 1.7rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 42px;
+            margin-left: 25px;
+        }
+
+        #logoutbuttton {
+            margin-top: 45px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        #bell {
+            margin-left: 50%;
+        }
+
+        #logo {
+            margin-top: 30px;
+        }
+
+
+
+        body {
+            background-color: black;
+        }
+
+        .searchBox {
+            position: absolute;
+            top: 50%;
+            left: 18.2%;
+            transform: translate(-50%, 50%);
+            background: #3a495e;
+            height: 60px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+
+        .searchBox:hover>.searchInput {
+            width: 640px;
+            padding: 0 6px;
+        }
+
+        .searchBox:hover>.searchButton {
+            background: white;
+            color: #2f3640;
+        }
+
+        .searchButton {
+            color: white;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+        }
+
+        .searchInput {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+        }
+
+        @media screen and (max-width: 620px) {
+            .searchBox:hover>.searchInput {
+                width: 150px;
+                padding: 0 6px;
+            }
+        }
+
+        .searchBox {
+            margin-top: -24.2%;
+            margin-left: 32%;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        #playbutton {
+            position: absolute;
+            margin-top: 13%;
+            margin-left: 49%;
+        }
+
+
+        /* starting og footer section */
+        .align {
+            display: flex;
+        }
+
+        .footer1 {
+            margin-left: 17%;
+            margin-top: 4%;
+        }
+
+        .footer1 p {
+            color: whitesmoke;
+            font-size: 1.3rem;
+        }
+
+        .footer2 {
+            margin-left: 17%;
+            margin-top: 1%;
+        }
+
+        .footer2 p {
+            color: whitesmoke;
+            font-size: 1.3rem;
+            margin-right: 260px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .footer3 {
+            margin-left: -2%;
+            margin-top: 1%;
+        }
+
+        .footer3 p {
+            color: whitesmoke;
+            font-size: 1.3rem;
+            margin-right: 260px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #e648b0157e67c {
+            margin-left: 17%;
+            margin-top: 0.5%;
+            height: 32px;
+            width: 96px;
+            border-radius: 5px;
+            font-size: 1.3rem;
+            background-color: #141313;
+            color: white;
+        }
+
+        #nindia {
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 17%;
+            margin-top: 0.8%;
+        }
+
+        #footerrow {
+            margin-top: 1%;
+        }
+
+        .row3 {
+            height: 10px;
+            width: 100%;
+            /* background-color: rgb(37, 37, 109); */
+            background-color: rgb(35, 35, 35);
+            margin-top: 1%;
+        }
+
+        /* Building the suggestion section */
+        .suggestions {
+            position: absolute;
+        }
+
+        .smovie1 {
+            margin-top: -92%;
+            margin-left: 460%;
+            height: 220px;
+            width: 400px;
+            border-radius: 20px;
+        }
+
+        .smovie2 {
+            margin-top: 59%;
+            margin-left: 460%;
+            height: 220px;
+            width: 400px;
+            border-radius: 20px;
+        }
+
+        .smovie3 {
+            margin-top: 4%;
+            margin-left: 460%;
+            height: 220px;
+            width: 400px;
+            background-color: rgb(0, 60, 255);
+            border-radius: 20px;
+        }
+
+        #gap {
+            border-radius: 20px;
+        }
+
+        /* Writing the CSS Code to make the page responsive */
+        /* Default styles for the footer */
+        /* Add your general footer CSS rules here */
+
+        /* Small screens (mobile phones) */
+        #showOptions {
+            display: none;
+        }
+
+        .options {
+            display: none;
+        }
+        @media (max-width: 1440px) {
+            #bell {
+                margin-left: 30%;
+            }
+
+            .footer3 {
+                margin-left: -4%;
+            }
+        }
+
+        @media (max-width: 1240px) {
+            #bell {
+                margin-left: 19%;
+            }
+
+            .footer1 {
+                margin-left: 5%;
+            }
+
+            .searchBox {
+                margin-top: -18.2%;
+                margin-left: 32%;
+            }
+
+            .searchBox {
+                margin-top: -18.2%;
+                margin-left: 32%;
+            }
+
+            #bell {
+                margin-left: 22%;
+            }
+
+            .footer2 {
+                margin-left: 6%;
+                margin-top: 1%;
+            }
+        }
+
+        @media (max-width: 1160px) {
+            .footer3 {
+                margin-left: -11%;
+            }
+
+            .footer2 {
+                margin-left: 2%;
+                margin-top: 1%;
+            }
+
+            #bell {
+                margin-left: 15%;
+            }
+
+            .searchBox {
+                margin-top: -22.2%;
+                margin-left: 32%;
+            }
+
+            .mynav h5 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h4 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h3 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 940px) {
+            #bell {
+                margin-left: 0%;
+            }
+
+            .mynav h2 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h4 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h3 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h5 {
+                font-size: 1.2rem;
+            }
+
+            .searchBox {
+                margin-top: -25.2%;
+            }
+
+            .footer2 {
+                margin-left: 1%;
+            }
+
+            .footer3 {
+                margin-left: -16%;
+            }
+        }
+
+        @media (max-width: 780px) {
+            .footer3 {
+                margin-left: -21%;
+            }
+
+            .mynav h2 {
+                display: none;
+            }
+
+            .mynav h4 {
+                display: none;
+            }
+
+            .mynav h3 {
+                display: none;
+            }
+
+            .mynav h5 {
+                display: none;
+            }
+
+            #bell {
+                display: none;
+            }
+
+            #logoutbuttton {
+                margin-left: 300px;
+            }
+
+            .searchBox {
+                margin-top: -36.2%;
+            }
+
+        }
+
+        @media (max-width: 780px) {
+            .footer2 {
+                display: none;
+                margin-left: 1%;
+            }
+
+            .searchBox {
+                margin-top: -39.2%;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .align {
+                display: block;
+            }
+
+            .footer2 {
+                margin-left: 31%;
+            }
+
+            .footer3 {
+                display: none;
+            }
+
+            .searchBox {
+                margin-left: 60%;
+                margin-top: -39.2%;
+            }
+
+            .mynav h2 {
+                display: none;
+            }
+
+            .mynav h4 {
+                display: none;
+            }
+
+            .mynav h3 {
+                display: none;
+            }
+
+            .mynav h5 {
+                display: none;
+            }
+
+            #bell {
+                display: none;
+                margin-left: 0%;
+            }
+
+            .searchBox {
+                display: none;
+            }
+
+            #logoutbuttton {
+                display: none;
+            }
+
+            .footer2 {
+                display: block;
+                margin-left: 1%;
+            }
+
+            .footer2 {
+                display: block;
+                margin-left: 18%;
+            }
+
+            .container {
+                margin-left: 140px;
+                margin-top: 40px;
+            }
+
+            #showOptions {
+                display: block;
+
+            }
+
+            .options {
+                display: flex;
+            }
+
+
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                margin-left: 20px;
+                margin-top: 33px;
+            }
+        }/* Writing the CSS Code to make the page responsive */
+        /* Default styles for the footer */
+        /* Add your general footer CSS rules here */
+
+        /* Small screens (mobile phones) */
+        #showOptions {
+            display: none;
+        }
+
+        .options {
+            display: none;
+        }
+        @media (max-width: 1440px) {
+            #bell {
+                margin-left: 30%;
+            }
+
+            .footer3 {
+                margin-left: -4%;
+            }
+        }
+
+        @media (max-width: 1240px) {
+            #bell {
+                margin-left: 19%;
+            }
+
+            .footer1 {
+                margin-left: 5%;
+            }
+
+            .searchBox {
+                margin-top: -18.2%;
+                margin-left: 32%;
+            }
+
+            .searchBox {
+                margin-top: -18.2%;
+                margin-left: 32%;
+            }
+
+            #bell {
+                margin-left: 22%;
+            }
+
+            .footer2 {
+                margin-left: 6%;
+                margin-top: 1%;
+            }
+        }
+
+        @media (max-width: 1160px) {
+            .footer3 {
+                margin-left: -11%;
+            }
+
+            .footer2 {
+                margin-left: 2%;
+                margin-top: 1%;
+            }
+
+            #bell {
+                margin-left: 15%;
+            }
+
+            .searchBox {
+                margin-top: -22.2%;
+                margin-left: 32%;
+            }
+
+            .mynav h5 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h4 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h3 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 940px) {
+            #bell {
+                margin-left: 0%;
+            }
+
+            .mynav h2 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h4 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h3 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h5 {
+                font-size: 1.2rem;
+            }
+
+            .searchBox {
+                margin-top: -25.2%;
+            }
+
+            .footer2 {
+                margin-left: 1%;
+            }
+
+            .footer3 {
+                margin-left: -16%;
+            }
+        }
+
+        @media (max-width: 780px) {
+            .footer3 {
+                margin-left: -21%;
+            }
+
+            .mynav h2 {
+                display: none;
+            }
+
+            .mynav h4 {
+                display: none;
+            }
+
+            .mynav h3 {
+                display: none;
+            }
+
+            .mynav h5 {
+                display: none;
+            }
+
+            #bell {
+                display: none;
+            }
+
+            #logoutbuttton {
+                margin-left: 300px;
+            }
+
+            .searchBox {
+                margin-top: -36.2%;
+            }
+
+        }
+
+        @media (max-width: 780px) {
+            .footer2 {
+                display: none;
+                margin-left: 1%;
+            }
+
+            .searchBox {
+                margin-top: -39.2%;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .align {
+                display: block;
+            }
+
+            .footer2 {
+                margin-left: 31%;
+            }
+
+            .footer3 {
+                display: none;
+            }
+
+            .searchBox {
+                margin-left: 60%;
+                margin-top: -39.2%;
+            }
+
+            .mynav h2 {
+                display: none;
+            }
+
+            .mynav h4 {
+                display: none;
+            }
+
+            .mynav h3 {
+                display: none;
+            }
+
+            .mynav h5 {
+                display: none;
+            }
+
+            #bell {
+                display: none;
+                margin-left: 0%;
+            }
+
+            .searchBox {
+                display: none;
+            }
+
+            #logoutbuttton {
+                display: none;
+            }
+
+            .footer2 {
+                display: block;
+                margin-left: 1%;
+            }
+
+            .footer2 {
+                display: block;
+                margin-left: 18%;
+            }
+
+            .container {
+                margin-left: 140px;
+                margin-top: 40px;
+            }
+
+            #showOptions {
+                display: block;
+
+            }
+
+            .options {
+                display: flex;
+            }
+
+
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                margin-left: 20px;
+                margin-top: 33px;
+            }
+        }
+
+        /* making the page responsive ----------------------------------------------------------------- */
+        @media (max-width: 1550px) {
+            #bell {
+    margin-left: 37%;
+}
+#logoutbuttton {
+    margin-top: 31px;
+}
+        }
+
+        @media (max-width: 1480px) {
+            .firstsec1 {
+    width: 105%;
+        }
+        .lists {
+    margin-top: 2%;
+    margin-left: 11%;
+}
+    }
+        @media (max-width: 1300px) {
+            .firstsec1 {
+    width: 111%;
+}
+.searchBox {
+    margin-top: -20.2%;
+    margin-left: 46%;
+}
+.content p {
+    margin-right: 2%;
+}
+            .lists {
+    margin-left: 10%;
+}
+        }
+        @media (max-width: 1150px) {
+            .lists {
+    margin-left: 22%;
+}
+        }
+        @media (max-width: 1050px) {
+            .firstsec1 {
+    width: 120%;
+}
+#bell {
+    margin-left: 28%;
+}
+.searchBox {
+    margin-top: -27%;
+    margin-left: 60%;
+}
+        }
+        @media (max-width: 870px) {
+            .movielist {
+    width: 121%;
+            }
+            .lists {
+    margin-left: 12%;
+}
+.content h1 {
+    margin-top: 22%;
+}
+.searchBox {
+    margin-top: -31%;
+}
+        }
+        @media (max-width: 810px) {
+            #bell {
+    margin-left: 19%;
+}
+.content h1 {
+    font-size: 2rem;
+}
+.content p {
+    margin-right: 2%;
+    font-size: 1.1rem;
+}
+        }
+        @media (max-width: 740px) {
+            #logoutbuttton {
+    margin-top: 31px;
+    margin-left: 720%;
+}
+.searchBox {
+    margin-top: -36%;
+    margin-left: 43%;
+}
+.firstsec1 {
+    width: 121%;
+}
+#playbutton {
+    margin-left: 55%;
+}
+.lists {
+    margin-left: 8%;
+}
+        }
+
+          @media (max-width: 670px) {
+            #logoutbuttton {
+    margin-left: 650%;
+}
+.lists {
+    margin-left: 27%;
+}
+.searchBox {
+    margin-top: -40%;
+    margin-left: 43%;
+}
+        }
+          @media (max-width: 580px) {
+            #logoutbuttton {
+    margin-left: 480%;
+}
+.searchBox {
+    margin-top: -45%;
+}
+        }
+          @media (max-width: 510px) {
+            .container {
+    margin-left: 220px;
+    margin-top: 40px;
+}
+.content p {
+    margin-right: 2%;
+    font-size: 0.7rem;
+}
+.lists {
+    margin-left: 20%;
+}       
+        }
+        @media (max-width: 410px) {
+            .content h1 {
+    margin-top: 31%;
+}
+.lists {
+    margin-left: 13%;
+}
+        }
+        @media (max-width: 370px) {
+            .lists {
+    margin-left: 5%;
+}
+        }
+        @media (max-width: 310px) {
+            .firstsec1 {
+    width: 140%;
+}
+.lists {
+    margin-left: 7%;
+}
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div class="firstsec1">
+        <nav class="mynav">
+            <a href="{% url 'home' %}"><img id="logo" src="{% static 'homepage/netflixlogo1.png' %}" alt=""></a>
+            <a href="{% url 'moviepage' %}">
+                <h5>Home</h5>
+            </a>
+            <a href="{% url 'moviepageshow' %}">
+                <h2>Movies </h2>
+            </a>
+            <a href="{% url 'mylist' %}">
+                <h3>MyList</h3>
+            </a>
+            <a href="{% url 'aisearch' %}">
+                <h4>AIsearch</h4>
+            </a>
+            <form method="GET" action="{% url 'searchpage' %}">
+                <div class="searchBox">
+
+                    <input class="searchInput" name="q" value="{{ query }}" type="text" 
+                        placeholder="Search">
+                    <button type="submit" class="searchButton" href="#">
+                        <i class="material-icons">
+                            search
+                        </i>
+                    </button>
+
+                </div>
+            </form>
+            <!-- </form> -->
+
+            <img id="bell" src="{% static 'nav/nav1.png' %}" alt="">
+            {% if user.is_authenticated %}
+            <a href="{% url 'login' %}"><button type="button" id="logoutbuttton" class="btn btn-danger">Logout</button></a>
+            {% endif %}
+            <div class="container">
+                <button id="showOptions" class="btn btn-primary">NAV</button>
+                <div class="options">
+                    <a href="{% url 'moviepage' %}"><button class="btn btn-light">Home</button></a>
+                    <a href="{% url 'moviepageshow' %}"><button class="btn btn-light">Movie</button></a>
+                    <a href="{% url 'mylist'  %}"><button class="btn btn-light">Mylist</button></a>
+                    <a href="{% url 'aisearch' %}"><button class="btn btn-light">Logout</button></a>
+                    {% if user.is_authenticated %}
+            <a href="{% url 'login' %}"><button type="button" id="logoutbuttton" class="btn btn-danger">Logout</button></a>
+            {% endif %}
+                </div>
+            </div>
+        </nav>
+        <!-- <button type="button" id="logoutbuttton" class="btn btn-danger btn-lg">Log out</button> -->
+        <a href="{% url 'fmovie' %}"><img src="{% static 'movie/play.png' %}" alt="" id="playbutton"></a>
+        <div class="content">
+           <!-- Here the cointent would be  ---------------------------------------------------------------------------------------------------------------- -->
+           <div class="suggestions">
+            <!-- <div class="smovie1">
+                {% if allPosts %}
+                <a href="{% url 'moviedetails' allPosts.7.slug %}"><img id="gap"
+                        src="{{allPosts.5.small_image.url}}" alt=""></a>
+                {% endif %}
+            </div>
+            <div class="smovie2">
+                {% if allPosts %}
+                <a href="{% url 'moviedetails' allPosts.8.slug %}"><img id="gap"
+                        src="{{allPosts.7.small_image.url}}"  alt=""></a>
+                {% endif %}
+            </div> -->
+            <!-- <div class="smovie3"></div> -->
+        </div>
+            <h1>Alice In BorderLand ( Season 3 ) </h1>
+            <p>Lorem optio. Excepturi cumque quam, fugiat recusandae quae, autem aut at optio dolore a accusantium,
+                dicta eum quidem! Consectetur placeat, provident sed error nostrum nam. Numquam, totam necessitatibus
+                nesciunt, iste fuga, officia error quos asperiores eius ipsam quo dicta! Expedita aut voluptates sint
+                architecto blanditiis similique aperiam quos doloribus ratione aspernatur, ipsa quis sunt repellendus
+                numquam seed harum.</p>
+            <h3>Release Date : </h3>
+            <div class="playbuttons">
+                <a href="{% url 'fmovie' %}"><button type="button" class="btn btn-danger btn-lg">Play Movie</button></a>
+                <button type="button" id="button2" class="btn btn-secondary btn-lg">More Info</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="movielist">
+        <p>.</p>
+        <h1>Popular Shows On Netflix</h1>
+        <div class="lists">
+            {% for post in allPosts %}
+            <a href="{% url 'moviedetails' post.slug %}"><img id="gap" src="{{post.small_image.url}}" class="image-fluid" alt=""></a>  <!-- class="img-thumbnail"  -->
+            {% endfor %}
+            <!---->
+            <img id="gap" src="{% static 'movie/test.jpg' %}" alt="">
+        </div>
+        <div class="row3"></div>
+        <footer>
+            <div class="footer1">
+                <p>Question ? Call 000-800-919-1694</p>
+            </div>
+            <div class="align">
+                <div class="footer2">
+                    <a href="">
+                        <p>FAQ</p>
+                    </a>
+                    <a href="">
+                        <p>Help Centre</p>
+                    </a>
+                    <a href="">
+                        <p> Account</p>
+                    </a>
+                    <a href="">
+                        <p>Media Centre</p>
+                    </a>
+                </div>
+                <div class="footer3">
+                    <a href="">
+                        <p>Investor Relations</p>
+                    </a>
+                    <a href="">
+                        <p>Terms of Use</p>
+                    </a>
+                    <a href="">
+                        <p> Jobs</p>
+                    </a>
+                    <a href="">
+                        <p>Privacy</p>
+                    </a>
+                </div>
+
+                <div class="footer3">
+                    <a href="">
+                        <p>Ways to Watch</p>
+                    </a>
+                    <a href="">
+                        <p>Cookie Preferences</p>
+                    </a>
+                    <a href="">
+                        <p> Corporate Information</p>
+                    </a>
+                    <a href="">
+                        <p>Contact Us</p>
+                    </a>
+                </div>
+                <div class="footer3">
+                    <a href="">
+                        <p>Speed Test</p>
+                    </a>
+                    <a href="">
+                        <p>Legal Notices</p>
+                    </a>
+                    <a href="">
+                        <p> Only on Netflix</p>
+                    </a>
+                </div>
+
+            </div>
+            <select id="e648b0157e67c" name="LanguageSelect" data-uia="language-picker">
+                <option selected="" lang="en" label="English" value="en-IN">English</option>
+                <option lang="hi" label="हिन्दी" value="hi-IN">हिन्दी</option>
+            </select>
+            <h4 id="nindia">Netflix India </h4>
+        </footer>
+        <div class="row3"></div>
+    </div>
+
+    <script>
+        document.getElementById("showOptions").addEventListener("click", function () {
+            const options = document.querySelector(".options");
+            options.style.display = (options.style.display === "none") ? "block" : "none";
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block myai %} 
+<style>
+    .mypage1{
+        height: 200px;
+        width: 100%;
+        background-color: rgb(64, 168, 128);
+        /* background-color: linear-gradient(to right,#ff0000,#00ff00,#0000ff); */
+    }
+    .mypage2{
+        height: 900px;
+        width: 90%;
+        background-color: rgb(214, 230, 230);
+        margin: 0 auto;
+        margin-top: -7%;
+    }
+    .mypage2 p{
+        color: rgb(214, 230, 230);
+    }
+    .mypage2 h1{
+        text-align: center;
+        margin-top: 1%;
+        font-size: 4rem;
+        color: rgb(0, 0, 0);
+    }
+    .searchbox{
+        margin-left: 5%;
+    }
+    #description{
+        height: 250px;
+        width: 95%;
+        border-radius: 14px;
+        font-size: 1.5rem;
+    }
+    .searchbutton{
+        margin-top: 0.5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .mypage3{
+        margin-top: -1%;
+        height: 200px;
+        width: 100%;
+        background-color: rgb(64, 168, 128);
+        /* background-color: linear-gradient(to right,#ff0000,#00ff00,#0000ff); */
+    }
+    #resultimage{
+        margin-left: 70%;
+        border-radius: 20px;
+    }
+    .resultdisplay{
+        display: flex;
+    }
+    .detailes{
+        margin-top: -21.3%;
+    }
+    .detailes h1{
+        margin-left: 20%;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    .detailes h2{
+       font-size: 2.5rem;
+       margin-left: 40%;
+       color: black;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+    .detailes h3{
+       font-size: 1.8rem;
+       margin-left: 29%;
+       color: black;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+    .noresult h6{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2rem;
+        font-family: fantasy;
+    }
+    .noresult img{
+        margin-left: 40%;
+    }
+
+    /* Making the page responsive */
+    @media (max-width: 1640px) {
+        #bell {
+    margin-left: 38%;
+}
+#logoutbuttton {
+    margin-top: 38%;
+}
+    }
+
+    @media (max-width: 1420px) {
+        #bell {
+    margin-left: 27%;
+}
+#logoutbuttton {
+    margin-top: 38%;
+}
+.searchBox {
+    display: none;
+}
+    }
+    @media (max-width: 1000px) {
+        #bell {
+    margin-left: 16%;
+}
+    }
+    @media (max-width: 880px) {
+        #bell {
+    margin-left: 3%;
+}
+.mypage1 {
+    width: 119%;
+}
+.mypage2 {
+    width: 119%;
+}
+.mypage3 {
+    width: 119%;
+}
+body{
+    background-color: black;
+}
+    }
+    @media (max-width: 500px) {
+        .mypage1 {
+    width: 128%;
+}
+.mypage2 {
+    width: 128%;
+}
+.mypage3 {
+    width: 128%;
+}
+    }
+
+    @media (max-width: 400px) {
+        .mypage1 {
+    width: 139%;
+}
+.mypage2 {
+    width: 139%;
+}
+.mypage3 {
+    width: 139%;
+}
+    }
+    @media (max-width: 370px) {
+        .mypage1 {
+    width: 146%;
+}
+.mypage2 {
+    width: 146%;
+}
+.mypage3 {
+    width: 146%;
+}
+    }
+    @media (max-width: 1650px) {
+    .resultdisplay {
+    display: block;
+}
+.detailes h3 {
+    display: none;
+}
+.detailes h1 {
+    margin-left: 6%;
+    margin-top: 22%;
+}
+.detailes h2 {
+    margin-left: 6%;
+}
+#resultimage {
+    margin-left: 40%;
+}
+
+    }
+</style>
+<div class="mypage1">
+
+</div>
+<div class="mypage2">
+    <p>.</p>
+    <h1>Welcome to Smart Search Ai </h1>
+    <form method="post">
+        {% csrf_token %}
+    <div class="searchbox">
+        <textarea name="user_input" id="description"></textarea>
+    </div>
+
+    <div class="searchbutton">
+    <div class="d-grid ">
+        <button class="btn btn-primary" type="submit">Search to get suggestions</button>
+      </div>
+    </div>
+    {% if suggested_movies %}
+    <div class="resultdisplay">
+        <div class="reimage">
+            {% for movie in suggested_movies %}
+        <img id="resultimage" src="{{movie.small_image.url}}" alt="image can't be loaded">
+        {% endfor %}
+        <!-- <img id="resultimage" src="{{suggested_movies.small_image.0.url}}" alt="image can't be loaded"> -->
+    </div>
+    
+    </div>
+    <div class="detailes">
+        <h1>Movie Details </h1>
+        <h2>Movie Name : {{ suggested_movies.0.title }} </h2>
+        <h3>Description : {{ suggested_movies.0.desc }}</h3>
+    </div>
+    {% else %}
+
+    <div class="noresult">
+        <h6>Sorry No Data found based oon your search please Search again Thank You</h6>
+        <img src="{% static 'nodata.png' %}" class="img-fluid" alt="...">
+    </div>
+{% endif %}
+    <!-- {% if suggested_movies %}
+   
+    {{ suggested_movies.0.title }}
+    
+{% else %}
+    No best-matching movie found.
+{% endif %} -->
+
+</form>
+</div>
+<div class="mypage3">
+
+</div>
+
+
+{% endblock myai %}

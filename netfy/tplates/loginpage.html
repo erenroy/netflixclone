@@ -1,0 +1,682 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .firstsec1 {
+            height: 1020px;
+            width: 100%;
+            background-image: url("{% static 'homepage/bg1.jpg' %}");
+            /* background-size: cover;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(501px); */
+        }
+
+        .firstsec1 img {
+            margin-top: 1.2%;
+            margin-left: 1.2%;
+        }
+
+        .signup {
+            height: 60px;
+            width: 140px;
+            background-color: red;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 1px solid red;
+            border-radius: 15px;
+            margin-left: 74%;
+        }
+
+        .login {
+            height: 60px;
+            width: 140px;
+            background-color: red;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 1px solid red;
+            border-radius: 15px;
+        }
+
+        .content1 h1 {
+            color: white;
+            font-size: 5rem;
+            text-align: center;
+            margin-top: 7%;
+        }
+
+        .content1 h2 {
+            color: white;
+            font-size: 5rem;
+            text-align: center;
+            margin-top: -1%;
+        }
+
+        .content1 p {
+            color: white;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-top: 0.1%;
+            font-weight: 400;
+        }
+
+        .content1 h4 {
+            color: white;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-top: -0.1%;
+            font-weight: 400;
+        }
+
+        #netflixemail {
+            margin-top: 1.5%;
+            margin-left: 28.5%;
+            height: 60px;
+            width: 880px;
+        }
+
+        #buttonsubmit {
+            margin-left: -5px;
+            height: 60px;
+            width: 220px;
+            background-color: red;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .secsection2 {
+            background-color: black;
+            height: 3390px;
+            width: 100%;
+        }
+
+        .row1 {
+            height: 10px;
+            width: 100%;
+            background-color: rgb(35, 35, 35);
+        }
+
+        .posterrow1 {
+            display: flex;
+        }
+
+        .poster1 h1 {
+            margin-left: 5%;
+            margin-top: 10%;
+            color: white;
+            font-size: 4rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 500;
+        }
+
+        .poster1 img {
+            margin-left: 10%;
+        }
+
+        .poster1 p {
+            color: rgb(255, 255, 255);
+            font-size: 1.8rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-top: -6%;
+            margin-left: 9%;
+        }
+
+        .row2 {
+            height: 10px;
+            width: 100%;
+            /* background-color: rgb(37, 37, 109); */
+            background-color: rgb(35, 35, 35);
+            margin-top: 8%;
+        }
+
+        .poster2 h1 {
+            margin-left: 5%;
+            margin-top: 8%;
+            color: white;
+            font-size: 4rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 500;
+        }
+
+        .poster2 img {
+            margin-left: 10%;
+        }
+
+        .poster2 p {
+            color: rgb(255, 255, 255);
+            font-size: 1.8rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-top: -8%;
+            margin-left: 48%;
+        }
+
+        /* staarting of fq section */
+        .faq h1 {
+            color: white;
+            font-size: 4.5rem;
+            text-align: center;
+            font-weight: 900;
+            margin-top: 3.2%;
+        }
+
+        .faqquestion {
+            height: 800px;
+            width: 1470px;
+            margin-top: 2%;
+            margin-left: 18%;
+        }
+
+        #accordionFlushExample .accordion-item {
+            background-color: rgb(65, 65, 65);
+        }
+
+        .accordion-body {
+            color: white;
+        }
+
+        .accordion-item {
+            margin-bottom: 15px;
+        }
+
+        .accordion-flush .accordion-item .accordion-button,
+        .accordion-flush .accordion-item .accordion-button.collapsed {
+            border-radius: 2px;
+        }
+
+        .signupbutton {
+            margin-left: 40%;
+            margin-top: 5%;
+            height: 65px;
+            width: 313px;
+            border-radius: 7px;
+            background-color: red;
+        }
+
+        .signupbutton h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 600;
+            /* margin-top: 130px; */
+            margin-top: -35px;
+            margin-left: 10px;
+        }
+
+        .signupbutton p {
+            color: red;
+        }
+
+        .row3 {
+            height: 10px;
+            width: 100%;
+            /* background-color: rgb(37, 37, 109); */
+            background-color: rgb(35, 35, 35);
+            margin-top: -8%;
+        }
+
+        /* starting of sign in content */
+        .signin1{
+            margin-top: 2%;
+            margin-left: 32%;
+            height: 55%;
+            width: 35%;
+            background-color: rgb(0, 0, 0,0.9);
+            backdrop-filter: blur(1px);
+        }
+        .signin1 h1{
+            color: white;
+            font-size: 4.5rem;
+            font-weight: 400;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+        .signin1 h2{
+            margin-left: 4%;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 300;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .texting{
+            margin-left: 4%;
+            height: 60px;
+            width: 760px;
+            margin-bottom: 1%;
+        }
+        .signin2{
+            margin-left: 42%;
+            margin-top: 2%;
+        }
+        .signin1 h3{
+            color: white;
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin: 2%;
+        }
+
+        /* Starting of footer section */
+        /* Starting of footer section */
+        .align{
+  display: flex;
+}
+.footer1{
+  margin-left: 17%;
+  margin-top: 4%;
+}
+.footer1 p{
+  color: whitesmoke;
+  font-size: 1.3rem;
+} 
+.footer2{
+  margin-left: 17%;
+  margin-top: 1%;
+}
+.footer2 p{
+  color: whitesmoke;
+  font-size: 1.3rem;
+  margin-right: 260px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer3{
+  margin-left: -2%;
+  margin-top: 1%;
+}
+.footer3 p{
+  color: whitesmoke;
+  font-size: 1.3rem;
+  margin-right: 260px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} 
+#e648b0157e67c {
+  margin-left: 17%;
+  margin-top: 0.5%;
+    height: 32px;
+    width: 96px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background-color: #141313;
+    color: white;
+}
+#nindia{
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 17%;
+  margin-top: 0.8%;
+}
+#footerrow{
+  margin-top: 1%;
+}
+
+
+
+/* Making the page responsive */
+@media (max-width: 1690px) {
+  .signup {
+    margin-left: 58%;
+}
+.texting {
+    width: 540px;
+}
+.firstsec1 {
+    width: 103%;
+}
+.secsection2 {
+    width: 102%;
+}
+        }
+
+        @media (max-width: 1500px) {
+          .texting {
+   width: 490px;
+}
+.firstsec1 {
+    width: 108%;
+}
+.secsection2 {
+    width: 108%;
+}
+.faqquestion {
+    margin-left: 7%;
+}
+        }
+        @media (max-width: 1150px) {
+          .faqquestion {
+    width: 1170px;
+    margin-left: 6%;
+}
+.texting {
+    width: 420px;
+}
+.firstsec1 {
+    width: 115%;
+}
+.secsection2 {
+    width: 115%;
+}
+        }
+
+        @media (max-width: 1000px) {
+          .firstsec1 {
+    width: 123%;
+}
+.secsection2 {
+    width: 123%;
+}
+.faqquestion {
+    width: 1170px;
+    margin-left: 11%;
+}
+        }
+
+        @media (max-width: 850px) {
+          .faqquestion {
+    margin-left: 4%;
+}
+.firstsec1 {
+    width: 133%;
+}
+.secsection2 {
+    width: 133%;
+}
+
+        }
+
+        @media (max-width: 850px) {
+          .firstsec1 {
+    width: 141%;
+}
+.secsection2 {
+    width: 141%;
+}
+.faqquestion {
+    margin-left: 11%;
+}
+        }
+        @media (max-width: 600px) {
+          .firstsec1 {
+    width: 176%;
+}
+.secsection2 {
+    width: 176%;
+}
+.faqquestion {
+    margin-left: 22%;
+}
+        }
+
+        @media (max-width: 500px) {
+          .faqquestion {
+    margin-left: 12%;
+    width: 1050px;
+}
+.firstsec1 {
+    width: 172%;
+}
+.secsection2 {
+    width: 172%;
+}
+        }
+        @media (max-width: 450px) {
+          .faqquestion {
+    margin-left: 16%;
+    width: 1050px;
+}
+.firstsec1 {
+    width: 184%;
+}
+.secsection2 {
+    width: 184%;
+}
+
+        }
+        @media (max-width: 400px) {
+          .faqquestion {
+    margin-left: 15%;
+    width: 1050px;
+}
+.firstsec1 {
+    width: 195%;
+}
+.secsection2 {
+    width: 195%;
+}
+        }
+
+        @media (max-width: 300px) {
+          .firstsec1 {
+    width: 202%;
+}
+.secsection2 {
+    width: 202%;
+}
+.faqquestion {
+    margin-left: 3%;
+    width: 999px;
+}
+        }
+    </style>
+
+</head>
+
+<body>
+  
+    <div class="firstsec1">
+      <div class="firstsec1">
+        
+        {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}><div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong></strong> {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div> </li>
+          {% endfor %}
+      </ul>
+  {% endif %}
+      
+      
+        <a href="{% url 'home' %}"><img src="{% static 'homepage/netflixlogo1.png' %}" alt=""></a>
+        <a href="{% url 'signin' %}"><button class="signup" >Sign In</button></a>
+        <a href="{% url 'login' %}"><button class="login">Log In</button></a>
+        
+        <div class="signin1">
+            <h1>Log In </h1>
+            <form method="POST">
+                {% csrf_token %}
+            <h2>Username </h2>
+            <input type="username" name="username" class="texting" placeholder="Enter Username">
+            <h2>Password </h2>
+            <input type="password" name="password" class="texting" placeholder="Enter Password">
+            <div class="signin2"><button type="submit" class="btn btn-danger btn-lg">Log In</button></div>
+        </form>
+            <h3>Don'thave account already ? <a href="{% url 'signin' %}">Sign Up</a></h3>
+        
+        </div> 
+
+        <!-- <div class="content1">
+            <h1>Unlimeted movies , TV shows </h1>
+            <h2>and more </h2>
+            <p>watch anywhere. cancel anytime.</p>
+            <h4>Ready to watch ? Enter your email to create or restart your membership .</h4>
+        </div>
+        <div class="emailtype">
+            <form action="">
+                <input type="email" class="email-input" id="netflixemail" placeholder="Email address">
+                <button type="submit" id="buttonsubmit" class="submit-button">Get Started</button>
+            </form>
+        </div> -->
+    </div>
+    <div class="secsection2">
+        <div class="row1"></div>
+        <div class="poster1">
+            <!-- <img src="{% static 'poster/posters11.jpg' %}" alt=""> -->
+            <div class="posterrow1">
+                <h1>Download your shows to watch offline </h1>
+                <img src="{% static 'poster/posters1.jpg' %}" alt="">
+            </div>
+            <p>Watch strangers thing season 5 on netflix now . subscribe now </p>
+        </div>
+        <div class="row2"></div>
+        <div class="poster2">
+            <!-- <img src="{% static 'poster/posters11.jpg' %}" alt=""> -->
+            <div class="posterrow1">
+                <img src="{% static 'poster/posters2.png' %}" alt="">
+                <h1>Download your shows to watch offline </h1>
+            </div>
+            <p>Watch strangers thing season 5 on netflix now . subscribe now </p>
+        </div>
+        <div class="row2"></div>
+        <div class="poster1">
+            <!-- <img src="{% static 'poster/posters11.jpg' %}" alt=""> -->
+            <div class="posterrow1">
+                <h1>Download your shows to watch offline </h1>
+                <img src="{% static 'poster/posters3.png' %}" alt="">
+            </div>
+            <p>Watch strangers thing season 5 on netflix now . subscribe now </p>
+        </div>
+        <div class="row2"></div>
+        <div class="poster2">
+            <!-- <img src="{% static 'poster/posters11.jpg' %}" alt=""> -->
+            <div class="posterrow1">
+                <img src="{% static 'poster/posters2.png' %}" alt="">
+                <h1>Download your shows to watch offline </h1>
+            </div>
+            <p>Watch strangers thing season 5 on netflix now . subscribe now </p>
+        </div>
+        <div class="row2"></div>
+        <!--- staarting of fq section -->
+        <div class="faq">
+            <h1>Frequently Asked Questions </h1>
+        </div>
+        <div class="faqquestion">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      What is Netflix ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+                      You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      How much does Netfllix cost ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts..</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                     How do i Cancel ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Where can i Watch ?
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptates commodi labore id tempore, nesciunt nostrum sit magnam atque minus mollitia eum voluptatibus officia dolores delectus error ut sapiente provident impedit vel nobis magni totam quae placeat? Quibusdam dignissimos quasi blanditiis suscipit in reiciendis harum?</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        How do i pay ?
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        is Netflix good for kids ?
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="signupbutton">
+                <p>.</p>
+                <a href="{% url 'signin' %}"><h1>Finish Sign Up ></h1></a>
+              </div>       
+        </div>
+        <div class="row3"></div>
+        <footer>
+            <div class="footer1">
+              <p>Question ? Call 000-800-919-1694</p>
+            </div>
+            <div class="align">
+             <div class="footer2">
+              <a href=""><p>FAQ</p></a>
+              <a href=""><p>Help Centre</p></a>
+              <a href=""><p> Account</p></a>
+              <a href=""><p>Media Centre</p></a>
+            </div>
+           <div class="footer3">
+              <a href=""><p>Investor Relations</p></a>
+              <a href=""><p>Terms of Use</p></a>
+              <a href=""><p> Jobs</p></a>
+              <a href=""><p>Privacy</p></a>
+            </div>
+          
+             <div class="footer3">
+              <a href=""><p>Ways to Watch</p></a>
+              <a href=""><p>Cookie Preferences</p></a>
+              <a href=""><p> Corporate Information</p></a>
+              <a href=""><p>Contact Us</p></a>
+            </div>
+            <div class="footer3">
+              <a href=""><p>Speed Test</p></a>
+              <a href=""><p>Legal Notices</p></a>
+              <a href=""><p> Only on Netflix</p></a>
+            </div>
+  
+          </div>
+          <select id="e648b0157e67c" name="LanguageSelect" data-uia="language-picker"><option selected="" lang="en" label="English" value="en-IN">English</option><option lang="hi" label="हिन्दी" value="hi-IN">हिन्दी</option></select>
+          <h4 id="nindia">Netflix India </h4>  
+        </footer>
+        <div id="footerrow" class="row2"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

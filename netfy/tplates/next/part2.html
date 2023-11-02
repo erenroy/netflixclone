@@ -1,0 +1,681 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    .firstsec1 {
+      height: 1020px;
+      width: 100%;
+      background-image: url("{% static 'homepage/bg1.jpg' %}");
+      /* background-size: cover;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(501px); */
+    }
+
+    .firstsec1 img {
+      margin-top: 1.2%;
+      margin-left: 1.2%;
+    }
+
+    .signup {
+      height: 60px;
+      width: 140px;
+      background-color: red;
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      border: 1px solid red;
+      border-radius: 15px;
+      margin-left: 74%;
+    }
+
+    #logoutbuttton {
+      margin-left: 80%;
+    }
+
+    /* starting of sign in content */
+    .signin1 {
+      margin-top:0. 1%;
+      margin-left: 32%;
+      height: 90%;
+      width: 35%;
+      background-color: rgb(0, 0, 0, 0.9);
+      backdrop-filter: blur(1px);
+    }
+
+    .signin1 h1 {
+      color: white;
+      font-size: 4.5rem;
+      font-weight: 400;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+    }
+
+    .signin1 h2 {
+      margin-left: 4%;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .texting {
+      margin-left: 4%;
+      height: 60px;
+      width: 760px;
+      margin-bottom: 1%;
+    }
+
+    .signin2 {
+      margin-left: 42%;
+      margin-top: 2%;
+    }
+
+    .signin1 h3 {
+      color: white;
+      font-size: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      margin: 2%;
+    }
+
+    .range {
+      margin-left: 30px;
+      margin-right: 50px;
+    }
+
+    .radio {
+      display: block;
+    }
+
+    #options {
+      color: white;
+    }
+
+    .form-check {
+      margin-left: 50px;
+    }
+
+    /* starting og footer section */
+    .align {
+      display: flex;
+    }
+
+    .footer1 {
+      margin-left: 17%;
+      margin-top: 4%;
+    }
+
+    .footer1 p {
+      color: whitesmoke;
+      font-size: 1.3rem;
+    }
+
+    .footer2 {
+      margin-left: 17%;
+      margin-top: 1%;
+    }
+
+    .footer2 p {
+      color: whitesmoke;
+      font-size: 1.3rem;
+      margin-right: 260px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer3 {
+      margin-left: -2%;
+      margin-top: 1%;
+    }
+
+    .footer3 p {
+      color: whitesmoke;
+      font-size: 1.3rem;
+      margin-right: 260px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #e648b0157e67c {
+      margin-left: 17%;
+      margin-top: 0.5%;
+      height: 32px;
+      width: 96px;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      background-color: #141313;
+      color: white;
+    }
+
+    #nindia {
+      font-size: 1.5rem;
+      color: white;
+      margin-left: 17%;
+      margin-top: 0.8%;
+    }
+
+    #footerrow {
+      margin-top: 1%;
+    }
+
+    .row3 {
+      height: 10px;
+      width: 100%;
+      /* background-color: rgb(37, 37, 109); */
+      background-color: rgb(35, 35, 35);
+      margin-top: 1%;
+    }
+
+    .searchresult1 h1 {
+      color: white;
+      font-size: 2rem;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+      margin: 3%;
+    }
+
+    .useless {
+      margin-top: -2%;
+      background-color: black;
+    }
+    .radio p{
+      font-size: 1rem;
+    }
+    #options{
+      text-align: center;
+    }
+
+    .pimages{
+      display: flex;
+    }
+    .pimages h4{
+      color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-left: 5%;
+      margin-right: 1%;
+    }
+
+        /* making the page responsive ----------------------------------------------------------------------- */
+        @media (max-width: 1440px) {
+            #bell {
+                margin-left: 30%;
+            }
+
+            .footer3 {
+                margin-left: -4%;
+            }
+        }
+
+        @media (max-width: 1240px) {
+            #bell {
+                margin-left: 19%;
+            }
+
+            .footer1 {
+                margin-left: 5%;
+            }
+
+            .searchBox {
+                margin-top: -18.2%;
+                margin-left: 32%;
+            }
+
+            .searchBox {
+                margin-top: -18.2%;
+                margin-left: 32%;
+            }
+
+            #bell {
+                margin-left: 22%;
+            }
+
+            .footer2 {
+                margin-left: 6%;
+                margin-top: 1%;
+            }
+        }
+
+        @media (max-width: 1160px) {
+            .footer3 {
+                margin-left: -11%;
+            }
+
+            .footer2 {
+                margin-left: 2%;
+                margin-top: 1%;
+            }
+
+            #bell {
+                margin-left: 15%;
+            }
+
+            .searchBox {
+                margin-top: -22.2%;
+                margin-left: 32%;
+            }
+
+            .mynav h5 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h4 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h3 {
+                font-size: 1.3rem;
+            }
+
+            .mynav h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 940px) {
+            #bell {
+                margin-left: 0%;
+            }
+
+            .mynav h2 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h4 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h3 {
+                font-size: 1.2rem;
+            }
+
+            .mynav h5 {
+                font-size: 1.2rem;
+            }
+
+            .searchBox {
+                margin-top: -25.2%;
+            }
+
+            .footer2 {
+                margin-left: 1%;
+            }
+
+            .footer3 {
+                margin-left: -16%;
+            }
+        }
+
+        @media (max-width: 780px) {
+            .footer3 {
+                margin-left: -21%;
+            }
+
+            .mynav h2 {
+                display: none;
+            }
+
+            .mynav h4 {
+                display: none;
+            }
+
+            .mynav h3 {
+                display: none;
+            }
+
+            .mynav h5 {
+                display: none;
+            }
+
+            #bell {
+                display: none;
+            }
+
+            #logoutbuttton {
+                margin-left: 300px;
+            }
+
+            .searchBox {
+                margin-top: -36.2%;
+            }
+
+        }
+
+        @media (max-width: 780px) {
+            .footer2 {
+                display: none;
+                margin-left: 1%;
+            }
+
+            .searchBox {
+                margin-top: -39.2%;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .align {
+                display: block;
+            }
+
+            .footer2 {
+                margin-left: 31%;
+            }
+
+            .footer3 {
+                display: none;
+            }
+
+            .searchBox {
+                margin-left: 60%;
+                margin-top: -39.2%;
+            }
+
+            .mynav h2 {
+                display: none;
+            }
+
+            .mynav h4 {
+                display: none;
+            }
+
+            .mynav h3 {
+                display: none;
+            }
+
+            .mynav h5 {
+                display: none;
+            }
+
+            #bell {
+                display: none;
+                margin-left: 0%;
+            }
+
+            .searchBox {
+                display: none;
+            }
+
+
+            .footer2 {
+                display: block;
+                margin-left: 1%;
+            }
+            .footer2 {
+                display: block;
+                margin-left: 18%;
+            }
+            .container {
+                margin-left: 140px;
+                margin-top: 40px;
+            }
+            #showOptions {
+                display: block;
+            }
+            .options {
+                display: flex;
+            }
+        }
+        @media (max-width: 450px) {
+            .container {
+                margin-left: 20px;
+                margin-top: 33px;
+            }
+        }
+
+
+        @media (max-width: 1650px) {
+          #logoutbuttton {
+    margin-left: 82%;
+    margin-top: -5%;
+}
+.texting {
+    width: 520px;
+}
+        }
+        @media (max-width: 1470px) {
+          .firstsec1 {
+    width: 106%;
+}
+.texting {
+    width: 500px;
+}
+        }
+        @media (max-width: 1290px) {
+          .firstsec1 {
+    width: 112%;
+}
+.texting {
+    width: 450px;
+}
+.useless {
+    width: 112%;
+}
+        }
+
+        @media (max-width: 1050px) {
+          .texting {
+    width: 350px;
+}
+
+        }
+        @media (max-width: 800px) {
+          .signin1 {
+            margin-left: 23%;
+    width: 54%;
+}
+.firstsec1 {
+    width: 120%;
+}
+.useless {
+    width: 120%;
+}
+.texting {
+    width: 450px;
+}
+        }
+
+        @media (max-width: 600px) {
+          .signin1 {
+    margin-left: 13%;
+    width: 73%;
+}
+#logoutbuttton {
+    margin-top: -12%;
+}
+        }
+        @media (max-width: 500px) {
+          .texting {
+    width: 400px;
+}
+.signin2 {
+    margin-left: 35%;
+}
+        }
+
+        @media (max-width: 430px) {
+          #logoutbuttton {
+    margin-left: 30%;
+    margin-top: 0%;
+}
+.texting {
+    width: 338px;
+}
+        }
+        @media (max-width: 430px) {
+          #logoutbuttton {
+    margin-left: 72%;
+    margin-top: -21%;
+}
+.signin1 {
+    margin-left: 3%;
+    width: 95%;
+}
+        }
+</style>
+</head>
+
+<body>
+  <div class="firstsec1">
+    <img src="{% static 'homepage/netflixlogo1.png' %}" alt="">
+    {% if user.is_authenticated %}
+    <a href="{% url 'login' %}"><button type="button" id="logoutbuttton" class="btn btn-danger btn-lg">Log
+        out</button></a>
+    {% endif %}
+    <div class="signin1">
+      <h1>Create a profile </h1>
+      <h2>Profile Name </h2>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="text" class="texting" name="myname" placeholder="Enter Username">
+        <h2>Enter age </h2>
+        <input type="number" class="texting" name="myage" placeholder="Enter Age">
+
+        <h2 id="options">Choose your Preferable content to watch</h2>
+        <div class="radio">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              <p id="options">All Movies and shows of Netflix  </p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice" id="flexRadioDefault1" >
+            <label class="form-check-label" for="flexRadioDefault1">
+              <p id="options">Action only </p>
+            </label>
+          </div>
+          <div class="form-check"> 
+            <input class="form-check-input" type="radio" name="choice" id="flexRadioDefault2" >
+            <label class="form-check-label" for="flexRadioDefault2">
+              <p id="options"> Japansce Animated movies and shows </p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice" id="flexRadioDefault2" >
+            <label class="form-check-label" for="flexRadioDefault2">
+              <p id="options">Hollywood Movies and Webseries </p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice"  id="flexRadioDefault2" >
+            <label class="form-check-label" for="flexRadioDefault2">
+              <p id="options">Korean Movies and Webseries</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice"  id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              <p id="options">  Sadfull Content </p>
+            </label>
+          </div>
+        </div>
+        <div class="pimages">
+        <h4>Select your profil Pic -</h4>
+        <input type="file" name="profileimmage" accept="image/*">
+      </div>
+        <h2 id="options">Maturity level </h2>
+        <div class="radio">
+
+        </div>
+        <div class="range">
+          <input type="range" class="form-range" id="customRange1">
+        </div>
+
+        
+        
+        <div class="signin2"><button type="submit" class="btn btn-danger btn-lg">Create Profile </button></div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="useless">
+
+
+    <div class="row3"></div>
+    <footer>
+      <div class="footer1">
+        <p>Question ? Call 000-800-919-1694</p>
+      </div>
+      <div class="align">
+        <div class="footer2">
+          <a href="">
+            <p>FAQ</p>
+          </a>
+          <a href="">
+            <p>Help Centre</p>
+          </a>
+          <a href="">
+            <p> Account</p>
+          </a>
+          <a href="">
+            <p>Media Centre</p>
+          </a>
+        </div>
+        <div class="footer3">
+          <a href="">
+            <p>Investor Relations</p>
+          </a>
+          <a href="">
+            <p>Terms of Use</p>
+          </a>
+          <a href="">
+            <p> Jobs</p>
+          </a>
+          <a href="">
+            <p>Privacy</p>
+          </a>
+        </div>
+
+        <div class="footer3">
+          <a href="">
+            <p>Ways to Watch</p>
+          </a>
+          <a href="">
+            <p>Cookie Preferences</p>
+          </a>
+          <a href="">
+            <p> Corporate Information</p>
+          </a>
+          <a href="">
+            <p>Contact Us</p>
+          </a>
+        </div>
+        <div class="footer3">
+          <a href="">
+            <p>Speed Test</p>
+          </a>
+          <a href="">
+            <p>Legal Notices</p>
+          </a>
+          <a href="">
+            <p> Only on Netflix</p>
+          </a>
+        </div>
+
+      </div>
+      <select id="e648b0157e67c" name="LanguageSelect" data-uia="language-picker">
+        <option selected="" lang="en" label="English" value="en-IN">English</option>
+        <option lang="hi" label="हिन्दी" value="hi-IN">हिन्दी</option>
+      </select>
+      <h4 id="nindia">Netflix India </h4>
+    </footer>
+    <div class="row3"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
